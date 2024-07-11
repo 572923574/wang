@@ -12,6 +12,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import url('@/uni.scss');
 /*每个页面公共css */
+@import url('@/static/css/page.scss');
 </style>
