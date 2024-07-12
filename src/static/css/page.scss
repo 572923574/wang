@@ -1,33 +1,38 @@
+* {
 
-*{
-    
     box-sizing: border-box;
 }
-.w-page{
+
+.w-page {
     padding: 20rpx 30rpx;
     width: 100%;
     position: absolute;
     bottom: 0;
     top: 0;
-    overflow:hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
     background-color: $w-bg-color;
-    .w-m-b-16{
+
+    .w-m-b-16 {
         margin-bottom: 16rpx;
     }
-    .w-m-b-10{
+
+    .w-m-b-10 {
         margin-bottom: 10rpx;
     }
-    .w-m-b-28{
+
+    .w-m-b-28 {
         margin-bottom: 28rpx;
     }
-    .w-m-b-32{
+
+    .w-m-b-32 {
         margin-bottom: 32rpx;
     }
-    .w-title-32{
+
+    .w-title-32 {
         border-left: 8rpx solid $w-title-color;
         padding-left: 20rpx;
         line-height: 32rpx;
@@ -35,5 +40,32 @@
         font-size: 32rpx;
         text-align: left;
         width: 100%;
+    }
+
+    .w-list-table {
+        width: 100%;
+    }
+
+    .w-list-header {
+        height: 108rpx;
+        line-height: 108rpx;
+        padding: 0 20rpx;
+        background-color: $w-list-header-color;
+        color: $w-list-header-font-color;
+        font-size: 32rpx;
+    }
+    .w-list-content{
+        overflow-y: auto;
+        .w-list-item{
+            margin: 0 40rpx;
+            padding: 0 20rpx;
+            border-bottom: 2rpx solid $w-list-header-color;
+            line-height: 124rpx;
+            color: $w-white-font;
+            font-size: 30rpx;
+        }
+        .w-list-item:last-child{
+            border: none;
+        }
     }
 }

@@ -53,6 +53,16 @@ export default {
         }
     },
     onLoad() { },
+    onShow() {
+        uni.setTabBarItem({
+            index: 0,
+            backgroundColor: '#647788',
+        })
+        uni.setTabBarStyle({
+            backgroundColor: '#647788',
+        })
+
+    },
     methods: {},
 }
 </script>
@@ -177,4 +187,5 @@ export default {
         }
 
     }
-}</style>
+}
+</style>
