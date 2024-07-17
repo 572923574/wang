@@ -32,6 +32,12 @@
 			}
 		},
 		
+		{
+			"path": "pages/substation/substation",
+			"style": {
+				"navigationBarTitleText": "变电所"
+			}
+		},
 
 		{
 			"path": "pages/index/index",

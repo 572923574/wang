@@ -54,9 +54,11 @@
         color: $w-list-header-font-color;
         font-size: 32rpx;
     }
-    .w-list-content{
+
+    .w-list-content {
         overflow-y: auto;
-        .w-list-item{
+
+        .w-list-item {
             margin: 0 40rpx;
             padding: 0 20rpx;
             border-bottom: 2rpx solid $w-list-header-color;
@@ -64,8 +66,40 @@
             color: $w-white-font;
             font-size: 30rpx;
         }
-        .w-list-item:last-child{
+
+        .w-list-item:last-child {
             border: none;
         }
+    }
+}
+
+.w-uni-table {
+    .uni-table {
+
+        background-color: $w-bg-color !important;
+    }
+
+    .w-uni-th {
+        height: 60rpx;
+        padding: 0 20rpx !important;
+        line-height: 60rpx;
+
+    }
+
+    .uni-table-tr:nth-child(2n+3) {
+
+        background-color: $w-uni-table-color !important;
+    }
+
+    .uni-table-td,
+    .uni-table-th {
+        border: none !important;
+    }
+
+    .w-uni-td {
+
+        height: 60rpx;
+        padding: 0 20rpx !important;
+        line-height: 60rpx;
     }
 }

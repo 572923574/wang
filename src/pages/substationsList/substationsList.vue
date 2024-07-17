@@ -3,7 +3,8 @@
         <view class="w-list-table">
             <view class="w-list-header">{{ '变电所列表' }}</view>
             <view class="w-list-content">
-                <view class="w-list-item" v-for="(item, i ) in pageList" :key="item.value">{{ item.label }}</view>
+                <view class="w-list-item" @tap="handleTap(item.value)" v-for="(item, i ) in pageList" :key="item.value">{{
+                    item.label }}</view>
             </view>
         </view>
     </view>
@@ -22,6 +23,13 @@ export default {
             { label: '1330M二号配电点', value: 7 },
             { label: '1330M一号配电点', value: 8 },
             { label: '1220M轨道暗斜井', value: 9 }]
+        }
+    }, methods: {
+        handleTap(value) {
+
+            uni.navigateTo({
+                url: `/pages/substation/substation?id=${value}`
+            })
         }
     }
 }
