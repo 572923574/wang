@@ -8,13 +8,18 @@
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/monitor/monitor",
+			"path": "pages/my/my",
 			"style": {
 				"navigationBarTitleText": "我的"
 			}
+		},{
+			"path": "pages/realTimeMonitor/realTimeMonitor",
+			"style": {
+				"navigationBarTitleText": "实时监测"
+			}
 		},
 		{
-			"path": "pages/realTime/realTime",
+			"path": "pages/realTimeData/realTimeData",
 			"style": {
 				"navigationBarTitleText": "实时"
 			}
@@ -60,13 +65,13 @@
 		"backgroundColor": "#647788",
 		"list": [
 			{
-				"pagePath": "pages/monitor/monitor",
+				"pagePath": "pages/my/my",
 				// "iconPath": "static/image/icon_API.png",
 				// "selectedIconPath": "static/image/icon_API_HL.png",
 				"text": "我的"
 			},
 			{
-				"pagePath": "pages/realTime/realTime",
+				"pagePath": "pages/realTimeMonitor/realTimeMonitor",
 				// "iconPath": "static/image/icon_component.png",
 				// "selectedIconPath": "static/image/icon_component_HL.png",
 				"text": "实时"

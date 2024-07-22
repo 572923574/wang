@@ -60,7 +60,8 @@ export default {
             { code: 'G12', name: '电闸121', voltage: '220V', current: '20A', stateName: '合闸' },
             { code: 'G13', name: '电闸131', voltage: '220V', current: '20A', stateName: '合闸' },
             { code: 'G14', name: '电闸141', voltage: '220V', current: '20A', stateName: '合闸' },
-            { code: 'G15', name: '电闸151', voltage: '220V', current: '20A', stateName: '合闸' }, { code: 'G021', name: '电闸2', voltage: '220V', current: '20A', stateName: '合闸' },
+            { code: 'G15', name: '电闸151', voltage: '220V', current: '20A', stateName: '合闸' },
+            { code: 'G021', name: '电闸2', voltage: '220V', current: '20A', stateName: '合闸' },
             { code: 'G031', name: '电闸31', voltage: '220V', current: '20A', stateName: '合闸' },
             { code: 'G041', name: '电闸41', voltage: '220V', current: '20A', stateName: '合闸' },
             { code: 'G051', name: '电闸51', voltage: '220V', current: '20A', stateName: '合闸' },
@@ -73,7 +74,20 @@ export default {
             { code: 'G121', name: '电闸121', voltage: '220V', current: '20A', stateName: '合闸' },
             { code: 'G131', name: '电闸131', voltage: '220V', current: '20A', stateName: '合闸' },
             { code: 'G141', name: '电闸141', voltage: '220V', current: '20A', stateName: '合闸' },
-            { code: 'G151', name: '电闸151', voltage: '220V', current: '20A', stateName: '合闸' },]
+            { code: 'G151', name: '电闸151', voltage: '220V', current: '20A', stateName: '合闸' },
+            ],
+            tableData: [
+                { code: 'G061', name: '电闸61', voltage: '110V', current: '20A', stateName: '合闸' },
+                { code: 'G071', name: '电闸71', voltage: '110V', current: '20A', stateName: '合闸' },
+                { code: 'G081', name: '电闸81', voltage: '110V', current: '20A', stateName: '合闸' },
+                { code: 'G091', name: '电闸91', voltage: '110V', current: '20A', stateName: '合闸' },
+                { code: 'G101', name: '电闸101', voltage: '110V', current: '20A', stateName: '合闸' },
+                { code: 'G111', name: '电闸111', voltage: '110V', current: '20A', stateName: '合闸' },
+                { code: 'G121', name: '电闸121', voltage: '110V', current: '20A', stateName: '合闸' },
+                { code: 'G131', name: '电闸131', voltage: '110V', current: '20A', stateName: '合闸' },
+                { code: 'G141', name: '电闸141', voltage: '110V', current: '20A', stateName: '合闸' },
+                { code: 'G151', name: '电闸151', voltage: '110V', current: '20A', stateName: '合闸' },
+            ]
         }
     },
     onLoad(options) {
@@ -88,6 +102,10 @@ export default {
             console.log(name, '这是什么情况')
             if (this.selectBtn == name) return
             this.selectBtn = name
+            this.pageList = this.$options.data().pageList
+            if ('low' == name) {
+                this.pageList = this.$options.data().tableData
+            }
         },
     }
 }
