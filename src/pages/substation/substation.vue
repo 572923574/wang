@@ -28,7 +28,7 @@
                     <uni-th width="150rpx" class="w-uni-th w-gold-font">电流</uni-th>
                     <uni-th width="170rpx" class="w-uni-th w-gold-font">状态</uni-th>
                 </uni-tr>
-                <uni-tr v-for="(item, index) in pageList" :key="index">
+                <uni-tr v-for="(item, index) in pageList" :key="index" @tap="changePage(item)">
                     <uni-td class="w-uni-td w-gold-font">{{ item.code }}</uni-td>
                     <uni-td class="w-uni-td w-green-font">{{ item.name }}</uni-td>
                     <uni-td class="w-uni-td w-green-font">{{ item.voltage }}</uni-td>
@@ -107,6 +107,12 @@ export default {
                 this.pageList = this.$options.data().tableData
             }
         },
+        changePage(item) {
+            uni.navigateTo({
+                url: `/pages/eventRecord/eventRecord?id=${item.code}`
+            })
+
+        }
     }
 }
 </script>
